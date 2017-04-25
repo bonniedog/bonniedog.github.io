@@ -4,6 +4,16 @@
         <title>Bonnie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+        @keyframes party {
+            from {
+                filter: hue-rotate(0deg);
+            }
+
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+
         html, body {
             margin: 0;
             padding: 0;
@@ -17,9 +27,20 @@
             width: 100%;
             object-fit: cover;
         }
+
+        img.party {
+            animation-name: party;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
         </style>
     </head>
     <body>
         <img src="bonnie.jpg">
+        <script>
+        var img = document.querySelector('img');
+        img.addEventListener('click', () => img.classList.toggle('party'));
+        </script>
     </body>
 </html>
