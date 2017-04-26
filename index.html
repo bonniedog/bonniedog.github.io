@@ -26,6 +26,10 @@
         </style>
     </head>
     <body>
-        <img src="bonnie.jpg">
+        <img>
     </body>
+    <script>
+        var img = document.querySelector('img');
+        img.src = `img/${Math.floor(Math.random()*73)}.jpg`;
+    </script>
 </html>
